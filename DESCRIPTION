@@ -1,9 +1,13 @@
 Package: Holiday
-Title: Holiday Color Themes
+Title: Holiday Visualization Themes
 Version: 0.0.0.9000
 Authors@R: 
     person("Kaylen", "Ton", , "kaylent2k@gmail.com", role = c("aut", "cre"))
-Description: This package provides unique custom holiday themes compatible with visualizations.
+Description: The 'Holiday' package provides festive color palettes, plot themes, and fun date-based utilities for data visualizations inspired by popular holidays. 
+'Holiday' makes it easy to style ggplot2 graphics with seasonal colors and moods such as Christmas, Valentine’s Day, Halloween, Easter, Lunar New Year, and more. 
+Users can access custom color palettes through 'holiday_palette()', apply themed ggplot2 styles with 'theme_holiday()', and even check how many days remain until a given holiday using 'holiday_countdown()'. 
+Additional features, such as 'plot_countdown()', visualize upcoming holidays in a cheerful and colorful way. 
+The package aims to bring creativity and festivity to data storytelling all year round.
 Depends: R (>= 3.1.2)
 License: use_mit_license()
 Encoding: UTF-8
