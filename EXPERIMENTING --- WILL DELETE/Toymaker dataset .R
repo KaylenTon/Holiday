@@ -12,4 +12,8 @@ table(sex) # table() shows the count per category
 days <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday") # Sundays are off
 # Elves are either part-time or full-time
 
-age <- rnorm(100:4500, 1225, T)
+age <- sample(100:5000, 1225, T)
+
+
+# Creating Dataframe
+toymaker <- data.frame(elf_id, sex, age)
