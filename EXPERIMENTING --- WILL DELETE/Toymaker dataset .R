@@ -4,6 +4,7 @@ set.seed(6767)
 # elf identifier variable. 1225 observations
 total_elves <- 1225
 elf_id <- 0001:total_elves
+elf_id <- sprintf("%04d", 1:total_elves)
 
 # sex variable
 sex <- as.factor(sample(c("Male", "Female"), total_elves, T))
@@ -16,10 +17,6 @@ hist(age)
 # job_type
 job_type <- as.factor(sample(c("Full-time", "Part-time"), total_elves, T, prob = c(.75, .25)))
 table(job_type)
-
-# schedule
-days <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday") # Sundays are off
-# Elves are either part-time or full-time
 
 # creating dataframe + new variable: weekly_hours
 toymaker <- data.frame(elf_id, sex, age, job_type) %>%
@@ -43,6 +40,3 @@ toymaker %>%
   group_by(job_type) %>%
   arrange(age) %>%
   count(job_type)
-
-
-
