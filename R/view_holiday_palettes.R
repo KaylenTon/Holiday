@@ -20,16 +20,3 @@ view_holiday_palette <- function(palette) {
 view_holiday_palettes <- function() {
 
 }
-
-Christmas10 <- c("#0b322d",
-                  "#005F54",
-                  "#008d78",
-                  "#00BE9C",
-                  "#fbc2bb",
-                  "#fb88a1",
-                  "#f54679",
-                  "#E60031",
-                  "#a70027",
-                  "#6C001A")
-
-view_holiday_palette(Christmas10)
