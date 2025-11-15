@@ -26,7 +26,14 @@ toymaker <- data.frame(elf_id, sex, age, job_type) %>%
                               )
          )
 
+# experience
+# want: elf's work experience CAN'T surpass elf's age minus 25 ;
+toymaker %>%
+  mutate(work_experience = ifelse())
+
 # Test Visualizations (for assessing distribution purposes)
+head(toymaker)
+
 toymaker %>%
   select(job_type, weekly_hours) %>%
   table()
