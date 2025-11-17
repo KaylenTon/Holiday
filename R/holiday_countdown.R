@@ -13,6 +13,6 @@ holiday_countdown <- function(holiday) {
 
   daysLeft <- as.numeric(holiday_date - today)
 
-  print(paste0("There are ", daysLeft, " days until ", holiday, "!"))
+  return(paste0("There are ", daysLeft, " days until ", holiday, "!"))
 
 }
