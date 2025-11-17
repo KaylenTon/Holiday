@@ -16,5 +16,3 @@ holiday_countdown <- function(holiday) {
   print(paste0("There are ", daysLeft, " days until ", holiday, "!"))
 
 }
-
-holiday_countdown("NewYearsDay")
