@@ -4,6 +4,5 @@ holiday_list <- list(
   StPatricks = "03-17",
   Juneteenth = "06-19",
   Halloween = "10-31",
-  Thanksgiving = "11-27",
   Christmas = "12-25"
 )
