@@ -14,9 +14,8 @@ table(sex) # table() shows the count per category
 age <- pmax(round(rnorm(total_elves, mean = 3140, sd = 1000)), 100)
 hist(age)
 
+# skewed age
 library(sn)
-rsn(n=1000, xi=0, omega=1, alpha=0, tau=0, dp=NULL)
-hist(round(rsn(total_elves, xi = c(100:5000), omega = 2500, alpha = 10, dp = NULL)))
 skewedAge <- pmax((round(rsn(total_elves, xi = c(100:total_elves), omega = 1200, alpha = 10, dp = NULL))), 100)
 summary(skewedAge)
 hist(skewedAge)
