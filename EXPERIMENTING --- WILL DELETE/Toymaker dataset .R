@@ -14,6 +14,13 @@ table(sex) # table() shows the count per category
 age <- pmax(round(rnorm(total_elves, mean = 3140, sd = 1000)), 100)
 hist(age)
 
+library(sn)
+rsn(n=1000, xi=0, omega=1, alpha=0, tau=0, dp=NULL)
+hist(round(rsn(total_elves, xi = c(100:5000), omega = 2500, alpha = 10, dp = NULL)))
+skewedAge <- pmax((round(rsn(total_elves, xi = c(100:total_elves), omega = 1200, alpha = 10, dp = NULL))), 100)
+summary(skewedAge)
+hist(skewedAge)
+
 # job_type
 job_type <- as.factor(sample(c("Full-time", "Part-time"), total_elves, T, prob = c(.75, .25)))
 table(job_type)
@@ -75,3 +82,35 @@ min(toymaker$age - toymaker$work_experience)
 which(toymaker$age <= toymaker$work_experience)
 all(toymaker$age > toymaker$work_experience)
 which(is.na(toymaker$age - toymaker$work_experience))
+
+
+# Professor's help:
+elves_data <- toymaker %>%
+  mutate(
+    # 1. Base productivity (toys per hour) - varies by elf
+    # This could be influenced by experience (but with diminishing returns)
+    # Add some random variation so not all elves are identical
+    base_productivity = 2 + (work_experience / 2000) + rnorm(n(), 0, 0.3),
+    base_productivity = pmax(base_productivity, 0.5), # minimum floor
+
+    # 2. Toys per week = productivity * hours worked
+    toys_per_week = round(base_productivity * weekly_hours),
+
+    # 3. Quality rate increases with experience (with diminishing returns)
+    # Using a logistic-style curve to keep it between 0 and 1
+    quality_rate = 0.70 + 0.25 * (1 - exp(-work_experience / 1500)) +
+      rnorm(n(), 0, 0.03),
+    quality_rate = pmax(0.5, pmin(0.99, quality_rate)), # bound between 50-99%
+
+    # 4. Defected toys based on quality rate
+    defected_toys_per_week = round(toys_per_week * (1 - quality_rate)),
+
+    # 5. Verify the quality rate calculation
+    calculated_quality_rate = 1 - (defected_toys_per_week / toys_per_week)
+  )
+
+hist(elves_data$quality_rate)
+
+lm <- lm(work_experience ~ sex + age + job_type + weekly_hours, data = elves_data)
+summary(lm)
+plot(elves_data$work_experience, elves_data$calculated_quality_rate)
