@@ -1,5 +1,5 @@
 # toymaker dataset
-set.seed(6767)
+set.seed(67)
 
 # elf identifier variable. 1225 observations
 total_elves <- 1225
@@ -28,8 +28,28 @@ toymaker <- data.frame(elf_id, sex, age, job_type) %>%
 
 # experience
 # want: elf's work experience CAN'T surpass elf's age minus 25 ;
-toymaker %>%
-  mutate(work_experience = ifelse())
+toymaker <- toymaker %>%
+  rowwise() %>%
+  mutate(
+    work_experience = case_when(
+      age <= 500 ~ round(runif(1, 75, age - 25)),
+      age <= 1000 ~ round(runif(1, 476, age - 25)),
+      age <= 2000 ~ round(runif(1, 976, age - 25)),
+      age <= 3000 ~ round(runif(1, 1976, age - 25)),
+      age <= 4000 ~ round(runif(1, 2976, age - 25)),
+      TRUE        ~ round(runif(1, 3976, age - 25))
+    )
+  ) %>%
+  ungroup()
+
+# toys_made_per_week
+
+
+
+# defected_toys_made_per_week
+
+
+
 
 # Test Visualizations (for assessing distribution purposes)
 head(toymaker)
@@ -47,3 +67,11 @@ toymaker %>%
   group_by(job_type) %>%
   arrange(age) %>%
   count(job_type)
+
+summary(toymaker$work_experience)
+summary(toymaker$age - toymaker$work_experience)
+
+min(toymaker$age - toymaker$work_experience)
+which(toymaker$age <= toymaker$work_experience)
+all(toymaker$age > toymaker$work_experience)
+which(is.na(toymaker$age - toymaker$work_experience))
