@@ -25,7 +25,7 @@ job_type <- as.factor(sample(c("Full-time", "Part-time"), total_elves, T, prob =
 table(job_type)
 
 # creating dataframe + new variable: weekly_hours
-toymaker <- data.frame(elf_id, sex, age, job_type) %>%
+toymaker <- data.frame(elf_id, sex, skewedAge, job_type) %>%
   mutate(weekly_hours = ifelse(job_type == "Full-time",
                                pmin(pmax(round(rnorm(n(), mean = 40, sd = 10)), 40), 60),
                                pmin(pmax(round(rnorm(n(), mean = 30, sd = 3)), 20), 34)
