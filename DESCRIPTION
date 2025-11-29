@@ -12,7 +12,8 @@ Description: The 'Holiday' package provides festive color palettes, plot themes,
     a given holiday using 'holiday_countdown()'. Additional features, such as 
     'plot_countdown()', visualize upcoming holidays in a cheerful and colorful way. 
     The package aims to bring creativity and festivity to data storytelling all year round.
-Depends: R (>= 3.1.2)
+Depends: 
+    R (>= 3.5)
 Imports: 
     ggplot2,
     scales
