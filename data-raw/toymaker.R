@@ -1,6 +1,4 @@
 ## code to prepare `toymaker` dataset goes here
-
-
 library(sn)
 library(tidyverse)
 
@@ -75,6 +73,5 @@ toymaker <- toymaker %>%
 
 toymaker <- toymaker %>%
   select(elf_id, sex, age, job_type, weekly_hours, work_experience, base_productivity, toys_per_week, defected_toys_per_week, quality_rate)
-
 
 usethis::use_data(toymaker, overwrite = TRUE)
