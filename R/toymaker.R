@@ -1,0 +1,20 @@
+#' Toymaker Dataset
+#'
+#' A pseudo, simulated dataset which documents 1225 elves' characteristic, efficiency, and quality rates in the toy-making department.
+#'
+#' @format ## `toymaker`
+#' A data frame with 1225 rows and 10 columns:
+#' \describe{
+#'   \item{elf_id}{Four-digit character ID for each elf.}
+#'   \item{sex}{Factor: "Male" or "Female".}
+#'   \item{age}{Elf age in years.}
+#'   \item{job_type}{Factor: Full-time or Part-time.}
+#'   \item{weekly_hours}{The number of hours an elf works per week.}
+#'   \item{work_experience}{An elf experience measured in years.}
+#'   \item{base_productivity}{The average number of toys made per hour by that elf.}
+#'   \item{toys_per_week}{The number of toy made per week by that elf.}
+#'   \item{defected_toys_per_week}{The number of toys that don’t make it past quality checks per week by that elf.}
+#' }
+#'
+#' @source Simulated and created by the package author, Kaylen Ton.
+"toymaker"

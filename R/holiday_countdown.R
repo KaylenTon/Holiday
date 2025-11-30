@@ -1,3 +1,12 @@
+#' holiday_countdown function
+#'
+#' @param holiday Choose a holiday and make sure to put it in quotes: New Years Day, Valentine, St Patricks, Juneteenth, Halloween, OR Christmas.
+#'
+#' @returns A string message telling you how many days are left until the chosen holiday!
+#' @export
+#'
+#' @examples
+#' holiday_countdown("Christmas")
 holiday_countdown <- function(holiday) {
 
   today <- Sys.Date()
@@ -11,8 +20,8 @@ holiday_countdown <- function(holiday) {
     holiday_date <- as.Date(paste0(next_year, "-", month_day))
   }
 
-  daysLeft <- as.numeric(holiday_date - today)
+  days_left <- as.numeric(holiday_date - today)
 
-  return(paste0("There are ", daysLeft, " days until ", holiday, "!"))
+  return(paste0("There are ", days_left, " days until ", holiday, "!"))
 
 }
