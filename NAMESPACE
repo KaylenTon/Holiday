@@ -2,3 +2,4 @@
 
 export(holiday_countdown)
 export(holiday_df)
+export(plot_holiday_countdowns)
