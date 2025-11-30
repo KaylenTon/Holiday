@@ -15,5 +15,5 @@ holiday_df <- function() {
     countdown = day_counts
   )
 
-  return(holiday_df)
+  holiday_df
 }
