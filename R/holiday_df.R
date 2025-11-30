@@ -1,14 +1,26 @@
-#' Holiday Countdowns
+#' holiday_df function
 #'
-#' This dataframe consists of six holidays: New Years Day, Valentine, St Patricks, Juneteenth, Halloween, and Christmas.
-#' It contains a column which records the number of days until the holiday, updated in real time.
+#' @returns a dataframe which is always updated with six holidays and the number of days until them, respectively
+#' @export
 #'
-#' @format ## `holiday_df`
-#' A data frame with 6 rows and 2 columns:
-#' \describe{
-#'   \item{holiday}{The name of the holiday.}
-#'   \item{countdown}{The number of days until the holiday.}
-#' }
-#'
-#' @source Created by the package author, Kaylen Ton.
-"holiday_df"
+#' @examples
+#' holiday_df()
+holiday_df <- function() {
+
+  holidays <- c("New Years Day", "Valentine", "St Patricks",
+                "Juneteenth", "Halloween", "Christmas")
+
+  day_counts <- numeric(length(holidays))
+
+  for (i in seq_along(holidays)) {
+    string <- holiday_countdown(holidays[i])
+    day_counts[i] <- as.numeric(stringr::str_extract(string, "\\d+"))
+  }
+
+  holiday_df <- data.frame(
+    holiday = holidays,
+    countdown = day_counts
+  )
+
+  holiday_df
+}
