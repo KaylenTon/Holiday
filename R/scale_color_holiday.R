@@ -20,3 +20,4 @@ scale_color_holiday <- function(palette, ...) {
     ...
   )
 }
+
