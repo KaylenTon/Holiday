@@ -45,24 +45,6 @@ setMethod("get_continuous", "HolidayPalette",
             ramp(n)
           })
 
-# scale_color + discrete and continuous -----------------------------------
-
-scale_color_holiday <- function(palette, ...) {
-  ggplot2::discrete_scale(
-    aesthetics = "colour",
-    scale_name = paste0("holiday_", palette@holiday),
-    palette = function(n) get_colors(palette, n),
-    ...
-  )
-}
-
-scale_color_holiday_c <- function(palette, ...) {
-  ggplot2::scale_colour_gradientn(
-    colours = palette@colors,
-    ...
-  )
-}
-
 # scale_fill + discrete and continuous ------------------------------------
 
 scale_fill_holiday <- function(palette, ...) {
