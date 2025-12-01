@@ -1,6 +1,10 @@
 #' holiday_df function
 #'
-#' @returns a dataframe which is always updated with six holidays and the number of days until them, respectively
+#' @description
+#' this function creates a dataframe with two columns: holiday and countdown. The columns contain six rows, which state the holiday name and how many until that holiday.
+#'
+#'
+#' @returns the function returns a dataframe which is always updated with six holidays and the number of days until them, respectively
 #' @export
 #'
 #' @examples

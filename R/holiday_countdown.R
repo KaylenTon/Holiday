@@ -1,5 +1,8 @@
 #' holiday_countdown function
 #'
+#' @description
+#' this function tells you how many days left until the holiday you inputted.
+#'
 #' @param holiday Choose a holiday and make sure to put it in quotes: New Years Day, Valentine, St Patricks, Juneteenth, Halloween, OR Christmas.
 #'
 #' @returns A string message telling you how many days are left until the chosen holiday!

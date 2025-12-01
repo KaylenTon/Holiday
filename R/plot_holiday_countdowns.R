@@ -1,5 +1,8 @@
 #' plot_holiday_countdowns function
 #'
+#' @description
+#' This function creates a simple bar chart visualization, ascending the holidays in the order they are closet to further from today!
+#'
 #' @returns a bar chart in ascending order, visualizing six holidays and how far they are in days
 #' @export
 #'

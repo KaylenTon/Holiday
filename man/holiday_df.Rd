@@ -7,10 +7,10 @@
 holiday_df()
 }
 \value{
-a dataframe which is always updated with six holidays and the number of days until them, respectively
+the function returns a dataframe which is always updated with six holidays and the number of days until them, respectively
 }
 \description{
-holiday_df function
+this function creates a dataframe with two columns: holiday and countdown. The columns contain six rows, which state the holiday name and how many until that holiday.
 }
 \examples{
 holiday_df()

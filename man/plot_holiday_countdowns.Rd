@@ -10,7 +10,7 @@ plot_holiday_countdowns()
 a bar chart in ascending order, visualizing six holidays and how far they are in days
 }
 \description{
-plot_holiday_countdowns function
+This function creates a simple bar chart visualization, ascending the holidays in the order they are closet to further from today!
 }
 \examples{
 plot_holiday_countdowns()

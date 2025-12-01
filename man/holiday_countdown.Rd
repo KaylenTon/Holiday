@@ -13,7 +13,7 @@ holiday_countdown(holiday)
 A string message telling you how many days are left until the chosen holiday!
 }
 \description{
-holiday_countdown function
+this function tells you how many days left until the holiday you inputted.
 }
 \examples{
 holiday_countdown("Christmas")
