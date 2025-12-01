@@ -10,8 +10,7 @@
 #' @export
 #'
 #' @examples
-#' data(toymaker)
-#' ggplot(toymaker, aes(sex, fill = sex)) + geom_bar() + scale_fill_holiday(Christmas)
+#' ggplot(toymaker, aes(x = job_type, y = age, color = job_type)) + geom_point(size = 3) + scale_color_holiday(Christmas)
 scale_color_holiday <- function(palette, ...) {
   ggplot2::discrete_scale(
     aesthetics = "colour",
@@ -20,4 +19,3 @@ scale_color_holiday <- function(palette, ...) {
     ...
   )
 }
-
