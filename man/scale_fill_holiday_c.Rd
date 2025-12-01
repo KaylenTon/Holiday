@@ -18,5 +18,5 @@ Applies the holiday color palette to your visualization's CONTINUOUS variables.
 This function applies a holiday color palette to your visualization's CONTINUOUS variables.
 }
 \examples{
-ggplot(toymaker, aes(x = elf_id, y = age, fill = age)) + geom_col() + scale_fill_holiday_c(Christmas)
+ggplot2::ggplot(toymaker, ggplot2::aes(x = elf_id, y = age, fill = age)) + ggplot2::geom_col() + scale_fill_holiday_c(Christmas)
 }

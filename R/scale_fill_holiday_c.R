@@ -10,7 +10,7 @@
 #' @export
 #'
 #' @examples
-#' ggplot(toymaker, aes(x = elf_id, y = age, fill = age)) + geom_col() + scale_fill_holiday_c(Christmas)
+#' ggplot2::ggplot(toymaker, ggplot2::aes(x = elf_id, y = age, fill = age)) + ggplot2::geom_col() + scale_fill_holiday_c(Christmas)
 scale_fill_holiday_c <- function(palette, ...) {
   ggplot2::scale_fill_gradientn(
     colours = palette@colors,

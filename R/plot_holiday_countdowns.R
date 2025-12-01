@@ -16,14 +16,14 @@ plot_holiday_countdowns <- function() {
   holiday_df$holiday <- factor(holiday_df$holiday, levels = holiday_df$holiday)
 
   ggplot2::ggplot(holiday_df) +
-    aes(holiday, countdown, fill = holiday) +
-    geom_col() +
-    labs(title = "Holidays Coming Up",
+    ggplot2::aes(holiday, countdown, fill = holiday) +
+    ggplot2::geom_col() +
+    ggplot2::labs(title = "Holidays Coming Up",
          x = "Holiday",
          y = "Days Until") +
-    geom_text(aes(label = countdown),
+    ggplot2::geom_text(ggplot2::aes(label = countdown),
               vjust = "bottom",
               nudge_y = 5) +
-    theme_minimal()
+    ggplot2::theme_minimal()
 
 }

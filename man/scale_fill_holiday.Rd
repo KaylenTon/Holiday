@@ -18,5 +18,5 @@ Applies the holiday color palette to your visualization's DISCRETE variables.
 This function applies a holiday color palette to your visualization's DISCRETE variables.
 }
 \examples{
-ggplot(toymaker, aes(sex, fill = sex)) + geom_bar() + scale_fill_holiday(Christmas)
+ggplot2::ggplot(toymaker, ggplot2::aes(sex, fill = sex)) + ggplot2::geom_bar() + scale_fill_holiday(Christmas)
 }

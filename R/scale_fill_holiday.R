@@ -10,7 +10,7 @@
 #' @export
 #'
 #' @examples
-#' ggplot(toymaker, aes(sex, fill = sex)) + geom_bar() + scale_fill_holiday(Christmas)
+#' ggplot2::ggplot(toymaker, ggplot2::aes(sex, fill = sex)) + ggplot2::geom_bar() + scale_fill_holiday(Christmas)
 scale_fill_holiday <- function(palette, ...) {
   ggplot2::discrete_scale(
     aesthetics = "fill",

@@ -10,7 +10,7 @@
 #' @export
 #'
 #' @examples
-#' ggplot(toymaker, aes(x = job_type, y = age, color = age)) + geom_point(size = 4, alpha = .1) + scale_color_holiday_c(Christmas)
+#' ggplot2::ggplot(toymaker, ggplot2::aes(x = job_type, y = age, color = age)) + ggplot2::geom_point(size = 4, alpha = .1) + scale_color_holiday_c(Christmas)
 scale_color_holiday_c <- function(palette, ...) {
   ggplot2::scale_colour_gradientn(
     colours = palette@colors,
