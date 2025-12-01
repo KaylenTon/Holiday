@@ -3,9 +3,7 @@ Title: Festive Palettes and Visualization Themes for ggplot2
 Version: 0.0.0.9000
 Authors@R: 
     person("Kaylen", "Ton", , "kaylent2k@gmail.com", role = c("aut", "cre"))
-Description: The 'Holiday' package provides festive color palettes and fun date-based utilities for data visualizations inspired by popular holidays. 
-    'Holiday' makes it easy to style ggplot2 graphics with seasonal colors and moods such as Christmas, Valentine’s Day, Halloween, Easter, Lunar New Year, and more. 
-    The package aims to bring creativity and festivity to data storytelling all year round. Palettes are compatible with ggplot2.
+Description: I created a custom holiday-themed package. This package provides festive color palettes and fun date-based utilities for data visualizations inspired by popular holidays. 'Holiday' makes it easy to style ggplot2 graphics with seasonal colors and moods such as Christmas, Valentine’s Day, Halloween, and more. The package aims to bring creativity and festivity to data storytelling all year round. Palettes are compatible with ggplot2.
 Depends: 
     R (>= 3.5)
 Imports: 
