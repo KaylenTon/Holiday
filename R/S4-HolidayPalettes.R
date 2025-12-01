@@ -29,7 +29,7 @@ setMethod("get_colors", "HolidayPalette",
             cols <- object@colors
             total <- length(cols)
 
-            # If no n supplied, return full palette
+            # Default n: use full palette (10 colors)
             if (is.null(n) || n >= total) return(cols)
 
             # Generate n evenly spaced indices
